@@ -115,7 +115,7 @@ char *my_strtok(char *buffer, const char *tokens) {
 
 	sequence_head = my_strtok_buffer;
 
-	if(sequence_head[0] == '\x0')
+	if(sequence_head != NULL && sequence_head[0] == '\x0')
 		return NULL;
 
 	token_position = strchr(my_strtok_buffer, tokens[0]);
